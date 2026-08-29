@@ -1,90 +1,52 @@
 :root {
   --bg: #111110;
   --ink: #f2ece4;
-  --muted: #a39a8e;
-  --line: #2a2926;
+  --muted: #8a8378;
   --accent: #00ffcc;
-  --paper: #1a1917;
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html, body { margin: 0; min-height: 100%; }
 body {
-  margin: 0;
-  min-height: 100vh;
   background: var(--bg);
   color: var(--ink);
   font: 18px/1.55 "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
 }
 
-.nav, main, footer {
-  width: min(760px, calc(100% - 2.5rem));
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.nav {
+.home {
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 1.5rem 0 2.5rem;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
 }
-.nav nav { display: flex; gap: 1.25rem; }
-.wordmark {
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: var(--ink);
-}
-a { color: var(--accent); }
-.nav nav a { color: var(--muted); text-decoration: none; }
-.nav nav a:hover { color: var(--ink); }
-
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.72rem;
-  color: var(--accent);
-  margin: 0 0 0.75rem;
-}
-h1 {
-  font-size: clamp(2.1rem, 5vw, 3.2rem);
-  line-height: 1.12;
+.home h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 600;
-  margin: 0 0 1rem;
+  letter-spacing: 0.02em;
 }
-h2 { font-size: 1.15rem; margin: 0 0 0.4rem; }
-.lede, .meta { color: var(--muted); max-width: 38rem; }
-.hero { padding-bottom: 2.75rem; border-bottom: 1px solid var(--line); }
-
-.grid {
-  display: grid;
-  gap: 1rem;
-  padding: 2rem 0 4rem;
-}
-@media (min-width: 700px) {
-  .grid { grid-template-columns: repeat(3, 1fr); }
-}
-.grid article {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 1.15rem 1.2rem 1.3rem;
-}
-.grid p { margin: 0; color: var(--muted); font-size: 0.98rem; }
-
-.policy { padding-bottom: 3rem; }
-.policy h2 { margin-top: 1.75rem; }
-.policy ul { padding-left: 1.2rem; }
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.5rem 0 2.5rem;
-  border-top: 1px solid var(--line);
+.privacy-link {
   color: var(--muted);
-  font-size: 0.92rem;
+  text-decoration: none;
+  font-size: 0.95rem;
 }
-footer p { margin: 0; }
+.privacy-link:hover { color: var(--accent); }
+
+.policy-page {
+  width: min(40rem, calc(100% - 2.5rem));
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+.back { margin: 0 0 2rem; }
+.back a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.back a:hover { color: var(--ink); }
+.policy-page h1 { font-size: 1.8rem; font-weight: 600; margin: 0 0 0.35rem; }
+.policy-page h2 { font-size: 1.05rem; margin: 1.6rem 0 0.4rem; }
+.meta, .policy-page p { color: var(--muted); }
+.policy-page p { margin: 0 0 0.85rem; }
+.policy-page a { color: var(--accent); }
