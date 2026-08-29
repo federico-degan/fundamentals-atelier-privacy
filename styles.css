@@ -84,10 +84,19 @@ header nav a {
 }
 
 .policy {
-  max-width: 640px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 48px 24px 80px;
 }
+
+.policy .meta { color: #888; }
+
+.policy ul {
+  padding-left: 1.2rem;
+  line-height: 1.6;
+}
+
+.policy li { margin-bottom: 0.5rem; }
 
 .policy h1 {
   color: #fff;
